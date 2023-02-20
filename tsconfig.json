@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "paths": {
+      "app1": [
+        "dist/app1/app1",
+        "dist/app1"
+      ],
+      "shared-lib": [
+        "dist/shared-lib/shared-lib/src/projects.ts",
+        "dist/shared-lib"
+      ],
+      "tyrios-lib": [
+        "dist/tyrios-lib/tyrios-lib",
+        "dist/tyrios-lib"
+      ]
+    },
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
+}

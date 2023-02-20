@@ -1,0 +1,65 @@
+<style>
+    input[type=text], select {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid silver;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    button {
+        border: 2px solid silver;
+        background-color: white;
+        font-size: 16px;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    button:active {
+        border-color: black;
+    }
+
+    #container {
+        border: 2px darkred dashed;
+        padding: 20px;
+    }
+</style>
+
+<div id="container">
+
+    <div>
+        <img src="../../../assets/angular.png" width="50">
+    </div>
+    <h1>Payment</h1>
+    <div>
+        <select>
+            <option>Select payment type</option>
+            <option>Debit card</option>
+            <option>Credit card</option>
+        </select>
+
+        
+        <!-- <input type="text" placeholder="Credit card"> -->
+    </div>
+    <div>
+        <input type="text" placeholder="Total Seats">
+    </div>
+    <div *ngIf="!show">
+        <input type="text" placeholder="Total Amount">
+    </div>
+    <div>
+        <button (click)="search()">Pay</button>
+        <button>Decline</button> <!--(click)="terms()"-->
+    </div>
+    <div>
+        <ng-container #vc></ng-container>
+    </div>
+</div>
